@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Quick Event Adder",
+    "version": "1.0",
+    "description": "Add calendar events quickly with natural language.",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": ["tabs"],
+    "host_permissions": ["https://calendar.google.com/*"]
+  }
+  
