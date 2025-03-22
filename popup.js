@@ -5,8 +5,22 @@ document.addEventListener("DOMContentLoaded", () => {
     function handleInput() {
       const text = input.value.trim();
       if (!text) return;
-  
-      const result = parseEvent(text);
+
+      function cleanInput(text) {
+        const punctuationToRemove = ['.', ',', '!', '?', ';', '(', ')', '{', '}', '[', ']', '_', '`', '~'];
+        let cleaned = '';
+      
+        for (let char of text) {
+          if (!punctuationToRemove.includes(char)) {
+            cleaned += char;
+          }
+        }
+      
+        return cleaned.split(/\s+/).join(' ').trim(); 
+      }
+      const cleanedText = cleanInput(text);
+      const result = parseEvent(cleanedText);
+      
   
       if (result.parsedDate) {
         const start = new Date(result.parsedDate);
