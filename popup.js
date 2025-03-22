@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
         input.value = "";
       } else {
-        console.log("⚠️ No date found");
+        console.log("No date found");
       }
     }
   
