@@ -14,7 +14,10 @@ function cleanInput(text) {
 }
 
 function parseEvent(input) {
-  const results = parse(input);
+  const cleanedInput = cleanInput(input);
+
+  const results = parse(cleanInput);
+
   let parsedDate = null;
   let eventName = input;
 
