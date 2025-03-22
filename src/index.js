@@ -1,4 +1,5 @@
 import { parse } from "chrono-node";
+
 function parseEvent(input) {
   const results = parse(input);
   let parsedDate = null;
@@ -14,5 +15,8 @@ function parseEvent(input) {
     eventName: eventName || "Untitled Event",
     parsedDate: parsedDate ? parsedDate.toISOString() : null
   };
+}
+function sillyThing() {
+    return;
 }
 window.parseEvent = parseEvent;
